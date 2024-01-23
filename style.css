@@ -1,0 +1,79 @@
+/*
+Theme Name: MotaPhoto
+Theme URI: https://github.com/themes/twentytwentyone/
+Author: Martial Mertzig
+Author URI: https://github.com/themes/twentytwentyone-child/
+Version: 1.0
+Tags: nathalie mota, photographie
+Text Domain: MotaPhoto
+*/
+
+/*Utilisation des polices Google Font en local */
+
+/* SpaceMono */
+
+    @font-face {
+        font-family: 'SpaceMono';
+        src: url('fonts/SpaceMono-Bold.ttf') format("truetype");
+        font-display: swap;
+        font-style: normal;
+        font-weight: 700; 
+    }
+
+    @font-face {
+        font-family: 'SpaceMono';
+        src: url('fonts/SpaceMono-BoldItalic.ttf') format("truetype");
+        font-display: swap;
+        font-style: italic;
+        font-weight: 700; 
+    }
+
+    @font-face {
+        font-family: 'SpaceMono';
+        src: url('fonts/SpaceMono-Italic.ttf') format("truetype");
+        font-display: swap;
+        font-style: italic;
+        font-weight: 400; 
+    }
+
+    @font-face {
+        font-family: 'SpaceMono';
+        src: url('fonts/SpaceMono-Regular.ttf') format("truetype");
+        font-display: swap;
+        font-style: normal;
+        font-weight: 400; 
+    }
+
+    /* Poppins */
+
+    @font-face {
+        font-family: 'Poppins';
+        src: url('fonts/Poppins-Italic.ttf') format("truetype");
+        font-display: swap;
+        font-style: italic;
+        font-weight: 400; 
+    }
+
+    @font-face {
+        font-family: 'Poppins';
+        src: url('fonts/Poppins-Light.ttf') format("truetype");
+        font-display: swap;
+        font-style: normal;
+        font-weight: 300; 
+    }
+
+    @font-face {
+        font-family: 'Poppins';
+        src: url('fonts/Poppins-LightItalic.ttf') format("truetype");
+        font-display: swap;
+        font-style: italic;
+        font-weight: 300; 
+    }
+
+    @font-face {
+        font-family: 'Poppins';
+        src: url('fonts/Poppins-Regular.ttf') format("truetype");
+        font-display: swap;
+        font-style: normal;
+        font-weight: 400; 
+    }
