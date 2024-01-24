@@ -1,18 +1,3 @@
-<?php
-/**
- * The header.
- *
- * This is the template that displays all of the <head> section and everything up until main.
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package WordPress
- * @subpackage Twenty_Twenty_One
- * @since 1.0.0
- */
-
-?>
-
 <!doctype html>
 <html <?php language_attributes(); ?>>
 
@@ -34,7 +19,7 @@
             <nav>
                 <?php
                 wp_nav_menu(array(
-                    'theme_location' => 'menu_principal',
+                    'theme_location' => 'menu_header',
                     'container' => false,
                     'menu_class' => 'menu',
                 ));
