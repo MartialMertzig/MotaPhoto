@@ -29,6 +29,15 @@ h2 {
     line-height: 58px;
 }
 
+h3 {
+    font-size: 18px;
+    color: black;
+    text-decoration: none;
+    font-family: 'SpaceMono', sans-serif;
+    font-weight: 400;
+    line-height: 26.66px;
+}
+
 p {
     font-size: 14px;
     color: black;
@@ -123,20 +132,98 @@ nav {
     align-items: flex-end;
 }
 
-.ligne3 {
-    width: 900px;
-    height: 1px;
-    padding-bottom: 12px;
+/*********** Bloc photo - Bandeau d'interactions inférieur ***********/
+
+.bannerBottom {
+    margin-left: 145px;
+    margin-right: 145px;
 }
 
-/*********** Footer ***********/
-
-footer {
+.selectorPhoto {
     display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     align-items: center;
-    justify-content: center;
-    border-top: 1px black solid;
-    width: 100%;
+    gap: 430px;
+}
+
+.selectorPhoto p {
+    font-size: 14px;
+    color: black;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    line-height: 21px;
+}
+
+.contactPhoto {
+    font-size: 12px;
+    color: black;
+    text-decoration: none;
+    font-family: 'SpaceMono', sans-serif;
+    font-weight: 400;
+    line-height: 17px;
+    background-color: #d8d8d8;
+    border-style: none;
+    border-radius: 2px;
+    width: 272px;
+    height: 50px;
+}
+
+.fleches {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.line3 {
+    width: 898px;
+    height: 1px;
+}
+
+.blocline4 {
+    margin-left: 145px;
+    margin-right: 145px;
+}
+
+.line4 {
+    width: 1616px;
+    height: 1px;
+    margin-top: 35px;
+}
+
+/*********** Bloc photo - Bandeau d'interactions inférieur P2 ***********/
+
+.carrousel {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    margin-left: 145px;
+    margin-right: 145px;
+}
+
+.carrouselPhoto {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.boutonPhoto {
+    font-size: 12px;
+    color: black;
+    text-decoration: none;
+    font-family: 'SpaceMono', sans-serif;
+    font-weight: 400;
+    line-height: 17px;
+    background-color: #d8d8d8;
+    border-style: none;
+    border-radius: 2px;
+    width: 272px;
+    height: 50px;
+    margin-top: 50px;
 }
 
 /* Modale */
@@ -168,7 +255,7 @@ footer {
     Width: 885px;
     Height: 106px;
     padding-top: 20px;
-    padding-bottom : 23px;
+    padding-bottom : 30px;
 }
 
 /* Case de la modale de contact */
@@ -248,4 +335,14 @@ footer {
     height: 15px;
     border: solid 1px #B8BBC2;
     border-radius: 8px;
+}
+
+/*********** Footer ***********/
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px black solid;
+    width: 100%;
 }

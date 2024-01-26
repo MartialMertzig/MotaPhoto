@@ -5,7 +5,7 @@
     $lien_post = '/photographies/'. $titre_nettoye;
     $photo_post = get_the_content();
     $date_post = get_the_date('Y');
-    $reference_photo = get_field('reference');
+    $reference_photo = get_field('references');
 
     // Récupération du format de la photo et stockage pour filtrage
     $formats = get_the_terms(get_the_ID(), 'formats');
@@ -18,7 +18,7 @@
         }
 
     // Récupération de la catégorie de la photo et stockage pour filtrage
-    $categories = get_the_terms(get_the_ID(), 'categorie');
+    $categories = get_the_terms(get_the_ID(), 'photocategories');
         if ($categories && !is_wp_error($categories)) {
             $noms_categories = array();
             foreach ($categories as $categorie) {
