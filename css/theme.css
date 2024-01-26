@@ -1,3 +1,44 @@
+
+/*********** Style : Typo et couleurs ***********/
+
+
+h1 {
+    position: absolute;
+    font-size: 96px;
+    text-decoration:dotted;
+    color: transparent;
+    font-family: 'SpaceMono', sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    line-height: 142.18px;
+    padding-top: 402px;
+    padding-left: 402px;
+
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: white;
+}
+
+h2 {
+    font-size: 66px;
+    color: black;
+    text-decoration: none;
+    font-family: 'SpaceMono', sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 58px;
+}
+
+p {
+    font-size: 14px;
+    color: black;
+    text-decoration: none;
+    font-family: 'SpaceMono', sans-serif;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 20.73px;
+}
+
 /*********** Header ***********/
 
 header {
@@ -9,25 +50,34 @@ header {
     box-shadow: 0 4px 4px 0 #00000008;
 }
 
-nav {
-    margin-right: 100px;
+body {
+    margin : 0px;
+    padding : 0px;
 }
 
-.logo {
-    margin-left: 100px;
+nav {
+    margin-right: 145px;
 }
 
 .logo img {
-    max-width: 250px;
+    margin-left: 145px;
+    max-width: 216px;
+    max-height: 14px;
+}
+
+/*********** Espace haut du site et header ***********/
+
+@media screen {
+    html {
+        margin-top: 0px !important;
+    }
 }
 
 /* Bannière */
 
 .ImgBanner {
-    margin: 0px;
-    padding: 0px;
-    max-width: 1440px;
-    max-height: 600px;
+    max-width: 1903px;
+    height: auto;
 }
 
 .menu-header {
@@ -38,9 +88,7 @@ nav {
     align-items: center;
 }
 
-
 /*********** Menu ***********/
-
 
 .menu {
     display: flex;
@@ -55,15 +103,30 @@ nav {
 }
 
 .menu a {
+    font-size: 16px;
     color: black;
     text-decoration: none;
     font-family: 'SpaceMono', sans-serif;
     font-weight: 400;
-    font-style: normal;
 }
 
-.menu a:hover {
-    font-weight: 700;
+/*********** Bloc photo ***********/
+
+.photopage {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 145px;
+    margin-right: 145px;
+    align-items: flex-end;
+}
+
+.ligne3 {
+    width: 900px;
+    height: 1px;
+    padding-bottom: 12px;
 }
 
 /*********** Footer ***********/
@@ -76,8 +139,113 @@ footer {
     width: 100%;
 }
 
-/* Modale de contact */
+/* Modale */
+
+#modalecontact {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    z-index: 1;
+    position: absolute;
+}
+
+.contact {
+    Width: 597px;
+    Height: 769px;
+    background-color: white;
+    margin-top: 30px;
+    border: 5px solid black;
+
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.bannermodale {
+    Width: 885px;
+    Height: 106px;
+    padding-top: 20px;
+    padding-bottom : 23px;
+}
+
+/* Case de la modale de contact */
 
 .modale {
-    display: none;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.modalenom label {
+    font-size: 12px;
+    color: black;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 18px;
+}
+
+.modalemail label {
+    font-size: 12px;
+    color: black;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 18px;
+}
+
+.modaleref label {
+    font-size: 12px;
+    color: black;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 18px;
+}
+
+.modalemess label {
+    font-size: 12px;
+    color: black;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 18px;
+}
+
+.wpcf7-textarea {
+    padding-top: 18px;
+    width: 263px;
+    height: 210px;
+    border: solid 1px #B8BBC2;
+    border-radius: 8px;
+}
+.modalesubmit input {
+    font-size: 12px;
+    color: black;
+    text-decoration: none;
+    font-family: 'SpaceMono', sans-serif;
+    font-weight: 400;
+    line-height: 17px;
+    background-color: #d8d8d8;
+    border-style: none;
+    border-radius: 2px;
+    width: 263px;
+    height: 50px;
+}
+
+.wpcf7-text {
+    padding-top: 23px;
+    width: 263px;
+    height: 15px;
+    border: solid 1px #B8BBC2;
+    border-radius: 8px;
 }

@@ -5,7 +5,7 @@
     <head>
         <meta charset="<?php bloginfo( 'charset' ); ?>">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Photographe</title>
+        <title>Nathalie Mota</title>
         <?php wp_head(); ?>
     </head>
 
@@ -27,10 +27,9 @@
             </nav>
 
             <!-- Modale -->
-            <div class="modale">
-       <?php include(get_stylesheet_directory() . '/template-part/modale.php'); ?>
-            </div>
-
         </header>
+        <div class="modale">
+       <?php include(get_stylesheet_directory() . '/template-part/modale.php'); ?>
+        </div>
 </div>
 

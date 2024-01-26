@@ -24,10 +24,10 @@ if ($custom_query->have_posts()) :
 
 ?>
 
-<div class="...">
+<div class="photopage">
 		<!-- Zone gauche - Informations photos -->
-		<div class="...">
-			<div class="...">
+		<div class="photographie">
+			<div class="photographiebloc">
 				<h2><?php echo the_title();?></h2>
 				<p>RÉFÉRENCE : <span id="..."><?php echo $reference;?></span></p>
 				<p>CATÉGORIE : 
@@ -43,6 +43,7 @@ if ($custom_query->have_posts()) :
 				</p>
 				<p>TYPE : <?php echo $type;?></p>
 				<p>ANNÉE : <?php echo $annee;?></p>
+				<img class="ligne3" src="<?php echo get_theme_file_uri() . '/assets/images/line-3.png'; ?>" alt="Grapefruit slice atop a pile of other slices" />
 			</div>
 		</div>
 		<!-- Zone droite - La photo -->
@@ -58,3 +59,5 @@ if ($custom_query->have_posts()) :
     wp_reset_postdata();
 endif;
 ?>
+
+<?php include('footer.php'); ?>

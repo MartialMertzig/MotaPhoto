@@ -14,7 +14,7 @@ Text Domain: MotaPhoto
 
     @font-face {
         font-family: 'SpaceMono';
-        src: url('fonts/SpaceMono-Bold.ttf') format("truetype");
+        src: url('assets/fonts/SpaceMono-Bold.ttf') format("truetype");
         font-display: swap;
         font-style: normal;
         font-weight: 700; 
@@ -22,7 +22,7 @@ Text Domain: MotaPhoto
 
     @font-face {
         font-family: 'SpaceMono';
-        src: url('fonts/SpaceMono-BoldItalic.ttf') format("truetype");
+        src: url('assets/fonts/SpaceMono-BoldItalic.ttf') format("truetype");
         font-display: swap;
         font-style: italic;
         font-weight: 700; 
@@ -30,7 +30,7 @@ Text Domain: MotaPhoto
 
     @font-face {
         font-family: 'SpaceMono';
-        src: url('fonts/SpaceMono-Italic.ttf') format("truetype");
+        src: url('assets/fonts/SpaceMono-Italic.ttf') format("truetype");
         font-display: swap;
         font-style: italic;
         font-weight: 400; 
@@ -38,7 +38,7 @@ Text Domain: MotaPhoto
 
     @font-face {
         font-family: 'SpaceMono';
-        src: url('fonts/SpaceMono-Regular.ttf') format("truetype");
+        src: url('assets/fonts/SpaceMono-Regular.ttf') format("truetype");
         font-display: swap;
         font-style: normal;
         font-weight: 400; 
@@ -48,7 +48,7 @@ Text Domain: MotaPhoto
 
     @font-face {
         font-family: 'Poppins';
-        src: url('fonts/Poppins-Italic.ttf') format("truetype");
+        src: url('assets/fonts/Poppins-Italic.ttf') format("truetype");
         font-display: swap;
         font-style: italic;
         font-weight: 400; 
@@ -56,7 +56,7 @@ Text Domain: MotaPhoto
 
     @font-face {
         font-family: 'Poppins';
-        src: url('fonts/Poppins-Light.ttf') format("truetype");
+        src: url('assets/fonts/Poppins-Light.ttf') format("truetype");
         font-display: swap;
         font-style: normal;
         font-weight: 300; 
@@ -64,7 +64,7 @@ Text Domain: MotaPhoto
 
     @font-face {
         font-family: 'Poppins';
-        src: url('fonts/Poppins-LightItalic.ttf') format("truetype");
+        src: url('assets/fonts//Poppins-LightItalic.ttf') format("truetype");
         font-display: swap;
         font-style: italic;
         font-weight: 300; 
@@ -72,7 +72,7 @@ Text Domain: MotaPhoto
 
     @font-face {
         font-family: 'Poppins';
-        src: url('fonts/Poppins-Regular.ttf') format("truetype");
+        src: url('assets/fonts/Poppins-Regular.ttf') format("truetype");
         font-display: swap;
         font-style: normal;
         font-weight: 400; 

@@ -14,7 +14,7 @@
 <!-- Bannière Photographe Event  -->
 <section class="banner">
     <div class='TextBanner'>
-        <p>PHOTOGRAPHE EVENT</p>
+        <h1>PHOTOGRAPHE EVENT</h1>
     </div>
     <div>
         <img class='ImgBanner' src="<?php echo get_theme_file_uri() . '/assets/images/nathalie-11.jpeg'; ?> " alt="Nathalie-Mota-Logo.png">

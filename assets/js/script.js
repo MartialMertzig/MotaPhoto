@@ -1,9 +1,9 @@
   // Gestion de la modale de contact
 document.addEventListener("DOMContentLoaded", function () { 
-	const boutonContact = document.querySelector("...");
-	const modale = document.querySelector("...");
-	const boutonFermeture = document.querySelector("...");
-	const conteneurModale = document.getElementById("....");
+	const boutonContact = document.querySelector(".menu a");
+	const modale = document.querySelector("modale.php");
+	const boutonFermeture = document.querySelector(".buttonclose");
+	const conteneurModale = document.getElementById(".modale");
 	
 	boutonContact.addEventListener("click", function() {
 	    // Gestion de la fermeture de la modale - En cliquant à nouveau sur Contact
