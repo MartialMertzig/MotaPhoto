@@ -29,20 +29,20 @@
 ?>
 
 <!-- Affichage du bloc photo -->
-<div class="...">
+<div class="blocPhoto">
     <div class="...">
         <?php echo $lien_post; ?>
     </div>
     <?php echo $photo_post; ?>
     <div class="...">
         <div class="...">
-            <div class="...">
-                <i class="fa-solid fa-expand full-screen" style="color: #ffffff;"></i>
+            <div class="Expand">
+                <i class="fa-solid fa-expand full-screen" style="color: #000000;"></i>
             </div>
-            <div class="...">
-                <i class="fa-regular fa-eye oeil" style="color: #ffffff;"></i>
+            <div class="">
+                <i class="fa-regular fa-eye oeil" style="color: #000000;"></i>
             </div>
-            <div class="...">
+            <div class="refphoto">
                 <div class="...">
                     <?php echo $reference_photo ?>
                 </div>
