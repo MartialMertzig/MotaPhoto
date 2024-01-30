@@ -494,8 +494,9 @@ footer {
 .filtres {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     align-items: center;
+    align-content: center;
     justify-content: flex-start;
 }
 
@@ -527,10 +528,6 @@ footer {
     padding: 14px 20px 14px 20px;
 }
 
-#filtre-tri {
-    margin-left: 350px;
-}
-
 /*********** Home Page - Photos ***********/
 
 .bouton-accueil {
@@ -554,6 +551,15 @@ footer {
     object-fit: cover;
     overflow: hidden;
 }
+
+.wp-block-image img {
+    box-sizing: border-box;
+    height: 495px;
+    width: 564px;
+    object-fit: cover;
+    vertical-align: bottom;
+}
+
 .bloc-les-photos {
     margin-left: 145px;
     margin-right: 145px;
@@ -563,6 +569,10 @@ footer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
+    justify-content: center;
+    gap: 20px;  
+}
+
+.lienPost {
+    text-indent: -3000px;
 }

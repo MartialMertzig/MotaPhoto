@@ -30,23 +30,23 @@
 
 <!-- Affichage du bloc photo -->
 <div class="blocPhoto">
-    <div class="...">
+    <div class="lienPost">
         <?php echo $lien_post; ?>
     </div>
     <?php echo $photo_post; ?>
-    <div class="...">
-        <div class="...">
-            <div class="Expand">
+    <div class="iconPhoto ">
+        <div class="photoInfos">
+            <div class="expand">
                 <i class="fa-solid fa-expand full-screen" style="color: #000000;"></i>
             </div>
-            <div class="">
+            <div class="eye">
                 <i class="fa-regular fa-eye oeil" style="color: #000000;"></i>
             </div>
-            <div class="refphoto">
-                <div class="...">
+            <div class="refCatPhoto">
+                <div class="referenceLightbox">
                     <?php echo $reference_photo ?>
                 </div>
-                <div class="...">
+                <div class="categoriesLightbox">
                     <?php echo $liste_categories; ?>
                 </div>
             </div>
