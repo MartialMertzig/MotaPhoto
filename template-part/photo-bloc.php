@@ -34,19 +34,19 @@
         <?php echo $lien_post; ?>
     </div>
     <?php echo $photo_post; ?>
-    <div class="iconPhoto ">
+    <div class="iconPhoto">
         <div class="photoInfos">
-            <div class="expand">
+            <div class="full-screen">
                 <i class="fa-solid fa-expand full-screen" style="color: #000000;"></i>
             </div>
-            <div class="eye">
+            <div class="">
                 <i class="fa-regular fa-eye oeil" style="color: #000000;"></i>
             </div>
             <div class="refCatPhoto">
-                <div class="referenceLightbox">
+                <div class="reference-photo">
                     <?php echo $reference_photo ?>
                 </div>
-                <div class="categoriesLightbox">
+                <div class="reference-photo">
                     <?php echo $liste_categories; ?>
                 </div>
             </div>

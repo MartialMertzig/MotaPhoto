@@ -1,7 +1,7 @@
   // Gestion de la modale de contact
 document.addEventListener("DOMContentLoaded", function () { 
 	const boutonContact = document.querySelector(".menu a");
-	const modale = document.querySelector("modale.php");
+	const modale = document.querySelector(".modale");
 	const boutonFermeture = document.querySelector(".buttonclose");
 	const conteneurModale = document.getElementById(".modale");
 	
@@ -90,12 +90,12 @@ document.addEventListener("DOMContentLoaded", function () {
 	
 	function overlay() {
 		// Apparition de l'overlay au survol
-		const autresPhotos = document.querySelectorAll('.autres-photos');
+		const blocPhoto = document.querySelectorAll('.blocPhoto');
 	
-		autresPhotos.forEach(element => {
-			const overlay = element.querySelector('.survol-photo');
+		blocPhoto.forEach(element => {
+			const overlay = element.querySelector('.iconPhoto');
 			const oeil = element.querySelector('.oeil');
-			const divLienPhoto = element.querySelector('.lien-photo');
+			const divLienPhoto = element.querySelector('.lienPost');
 			const lienPhoto = divLienPhoto.innerHTML;
 	
 	

@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Création d'une fonction pour la gestion du bouton charger plus en cas de filtrage avant son utilisation
     function surveillerChargerPlus() {
-        var nombrePhotos = zoneLesPhotos.querySelectorAll('.autres-photos').length;
+        var nombrePhotos = zoneLesPhotos.querySelectorAll('.blocPhoto').length;
         if (nombrePhotos < 8) {
             boutonChargerPlus.style.display = "none";
         }

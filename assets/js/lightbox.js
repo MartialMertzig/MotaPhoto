@@ -1,5 +1,5 @@
 function lightbox() {
-    const recuperationPhotos = document.querySelectorAll('.autres-photos');
+    const recuperationPhotos = document.querySelectorAll('.blocPhoto');
     const lightbox = document.querySelector('.lightbox');
     const zonePhotoLightBox = lightbox.querySelector('.lightbox-affichage img');
     const zoneReference = lightbox.querySelector('.reference-photo');

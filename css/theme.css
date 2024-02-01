@@ -554,7 +554,7 @@ footer {
 
 .wp-block-image img {
     box-sizing: border-box;
-    height: 495px;
+    /*** height: 495px; ***/
     width: 564px;
     object-fit: cover;
     vertical-align: bottom;
@@ -571,8 +571,4 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;  
-}
-
-.lienPost {
-    text-indent: -3000px;
 }

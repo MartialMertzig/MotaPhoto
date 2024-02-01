@@ -98,14 +98,14 @@ endif;
 					if (!empty($previous_post)) :
 					?>
 						<a href="<?php echo get_permalink($previous_post); ?>">
-							<img class="..." src="<?php echo get_stylesheet_directory_uri() . '/assets/fleche-navigation-gauche.png' ?>" alt="Flèche de gauche" />
+							<img class="conteneur-vignette-precedent" src="<?php echo get_stylesheet_directory_uri() . '/assets/fleche-navigation-gauche.png' ?>" alt="Flèche de gauche" />
 						</a>
 					<!-- Si post précédent non-existant, affichage du dernier post publié -->
 					<?php else :
 						$last_post = $last_post->posts[0];
 					?>
 						<a href="<?php echo get_permalink($last_post); ?>">
-							<img class="..." src="<?php echo get_stylesheet_directory_uri() . '/assets/fleche-navigation-gauche.png' ?>" alt="Flèche de gauche" />
+							<img class="conteneur-vignette-precedent" src="<?php echo get_stylesheet_directory_uri() . '/assets/fleche-navigation-gauche.png' ?>" alt="Flèche de gauche" />
 						</a>
 					<?php endif; ?>
 				</div>
@@ -117,14 +117,14 @@ endif;
 					if (!empty($next_post)) :
 					?>
 						<a href="<?php echo get_permalink($next_post); ?>">
-							<img class="..." src="<?php echo get_stylesheet_directory_uri() . '/assets/fleche-navigation-droite.png' ?>" alt="Flèche de droite" />
+							<img class="conteneur-vignette-suivant" src="<?php echo get_stylesheet_directory_uri() . '/assets/fleche-navigation-droite.png' ?>" alt="Flèche de droite" />
 						</a>
 					<!-- Si post suivant non-existant, affichage du premier post publié -->
 					<?php else :
 						$first_post = $first_post->posts[0]; 
 					?>
 						<a href="<?php echo get_permalink($first_post); ?>">
-							<img class="... src="<?php echo get_stylesheet_directory_uri() . '/assets/fleche-navigation-droite.png' ?>" alt="Flèche de droite"/>
+							<img class="conteneur-vignette-suivant" src="<?php echo get_stylesheet_directory_uri() . '/assets/fleche-navigation-droite.png' ?>" alt="Flèche de droite"/>
 						</a>
 					<?php endif; ?>
 				</div>

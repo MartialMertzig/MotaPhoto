@@ -15,7 +15,7 @@
                     <i class="fa-solid fa-xmark" style="color: #000000;"></i>
                 </div>
                 <div class="lightbox-affichage">
-                    <img class='' src='/assets/images/Overlay.png'; ?> "/>
+                    <img class=''/>
                 </div>
                 <div class="lightbox-fleches">
                     <div class="precedente">
