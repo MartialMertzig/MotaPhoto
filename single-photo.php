@@ -47,8 +47,8 @@ if ($custom_query->have_posts()) :
 			</div>
 		</div>
 		<!-- Zone droite - La photo -->
-		<div class="...">
-			<div class="...">
+		<div class="singleContent">
+			<div class="contentImg">
 				<?php the_content();?>
 			</div>
 		</div>
@@ -64,9 +64,8 @@ endif;
 	<div class="bannerBottom">
 		<div class="selectorPhoto">
 			<p>Cette photo vous intéresse ?</p>
-			<button class="contactPhoto">Contact</button>
-		</div>
-		<div class="...">
+			<button class="boutonModale">Contact</button>
+		<div class="miniature">
 			<!-- Définition des bornes du tableau pour créer une boucle -->
 			<?php 
 				// Requête pour obtenir le dernier post
@@ -78,6 +77,11 @@ endif;
 				);
 
 				$last_post = new WP_Query($args_dernier);
+				if($last_post->have_posts() ) : while( $last_post->have_posts() ) : $last_post->the_post();
+				the_content();
+				endwhile;
+				endif;
+				wp_reset_postdata();
 
 				// Requête pour obtenir le premier post
 				$args_premier = array(
@@ -88,9 +92,14 @@ endif;
 				);
 
 				$first_post = new WP_Query($args_premier);
+
+				if($first_post->have_posts() ) : while($first_post->have_posts() ) : $first_post->the_post();
+				endwhile;
+				endif;
+				wp_reset_postdata();
 			?>
-			<div class="fleches">
-				<div class="...">
+			<div class="vignette">
+				<div class="conteneur-vignette-precedent">
 					<!-- Récupération du post précédent par date de publication ASC (comportement par defaut) -->
 					<?php
 					$previous_post = get_previous_post();
@@ -98,18 +107,18 @@ endif;
 					if (!empty($previous_post)) :
 					?>
 						<a href="<?php echo get_permalink($previous_post); ?>">
-							<img class="conteneur-vignette-precedent" src="<?php echo get_stylesheet_directory_uri() . '/assets/fleche-navigation-gauche.png' ?>" alt="Flèche de gauche" />
+							<img class="fleche-gauche" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/fleche-navigation-gauche.png' ?>" alt="Flèche de gauche" />
 						</a>
 					<!-- Si post précédent non-existant, affichage du dernier post publié -->
 					<?php else :
 						$last_post = $last_post->posts[0];
 					?>
 						<a href="<?php echo get_permalink($last_post); ?>">
-							<img class="conteneur-vignette-precedent" src="<?php echo get_stylesheet_directory_uri() . '/assets/fleche-navigation-gauche.png' ?>" alt="Flèche de gauche" />
+							<img class="fleche-droite'" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/fleche-navigation-gauche.png' ?>" alt="Flèche de gauche" />
 						</a>
 					<?php endif; ?>
 				</div>
-				<div class="...">
+				<div class="conteneur-vignette-suivant">
 					<!-- Récupération du post suivant par date de publication ASC (comportement naturel) -->
 					<?php
 					$next_post = get_next_post();
@@ -117,29 +126,30 @@ endif;
 					if (!empty($next_post)) :
 					?>
 						<a href="<?php echo get_permalink($next_post); ?>">
-							<img class="conteneur-vignette-suivant" src="<?php echo get_stylesheet_directory_uri() . '/assets/fleche-navigation-droite.png' ?>" alt="Flèche de droite" />
+							<img class="fleche-gauche" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/fleche-navigation-droite.png' ?>" alt="Flèche de droite" />
 						</a>
 					<!-- Si post suivant non-existant, affichage du premier post publié -->
 					<?php else :
 						$first_post = $first_post->posts[0]; 
 					?>
 						<a href="<?php echo get_permalink($first_post); ?>">
-							<img class="conteneur-vignette-suivant" src="<?php echo get_stylesheet_directory_uri() . '/assets/fleche-navigation-droite.png' ?>" alt="Flèche de droite"/>
+							<img class="fleche-droite'" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/fleche-navigation-droite.png' ?>" alt="Flèche de droite"/>
 						</a>
 					<?php endif; ?>
 				</div>
 			</div>
 		</div>
+		</div>
 	</div>
 
 	<div class="blocline4">
-		<img class="line4" src="<?php echo get_theme_file_uri() . '/assets/images/line-3.png'; ?>" alt="Grapefruit slice atop a pile of other slices" />
+		<img class="line4" src="<?php echo get_theme_file_uri() . '/assets/images/Line-4.png;' ?>" alt="Grapefruit slice atop a pile of other slices" />
 	</div>
 
 <!-- Dernière partie de page - Photos apparentées -->
 <div class="carrousel">
-	<h3>Vous aimerez aussi</h3>
-	<div class="">
+	<h3>VOUS AIMEREZ AUSSI</h3>
+	<div class="boxCarrousel">
 		<div class="carrouselPhoto">
 			<?php
 				// Récupération de la catégorie de la photo actuelle

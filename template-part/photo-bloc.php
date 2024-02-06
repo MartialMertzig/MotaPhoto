@@ -29,24 +29,25 @@
 ?>
 
 <!-- Affichage du bloc photo -->
-<div class="blocPhoto">
-    <div class="lienPost">
+<!-- Affichage du bloc photo -->
+<div class="autres-photos">
+    <div class="lien-photo">
         <?php echo $lien_post; ?>
     </div>
     <?php echo $photo_post; ?>
-    <div class="iconPhoto">
-        <div class="photoInfos">
-            <div class="full-screen">
-                <i class="fa-solid fa-expand full-screen" style="color: #000000;"></i>
+    <div class="survol-photo">
+        <div class="">
+            <div class="haut-survol">
+                <i class="fa-solid fa-expand full-screen" style="color: #ffffff;"></i>
             </div>
-            <div class="">
-                <i class="fa-regular fa-eye oeil" style="color: #000000;"></i>
+            <div class="milieu-survol">
+                <i class="fa-regular fa-eye oeil" style="color: #ffffff;"></i>
             </div>
-            <div class="refCatPhoto">
+            <div class="bas-survol">
                 <div class="reference-photo">
                     <?php echo $reference_photo ?>
                 </div>
-                <div class="reference-photo">
+                <div class="categorie-photo">
                     <?php echo $liste_categories; ?>
                 </div>
             </div>

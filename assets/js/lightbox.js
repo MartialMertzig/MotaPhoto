@@ -1,5 +1,5 @@
 function lightbox() {
-    const recuperationPhotos = document.querySelectorAll('.blocPhoto');
+    const recuperationPhotos = document.querySelectorAll('.autres-photos');
     const lightbox = document.querySelector('.lightbox');
     const zonePhotoLightBox = lightbox.querySelector('.lightbox-affichage img');
     const zoneReference = lightbox.querySelector('.reference-photo');
@@ -43,8 +43,8 @@ function lightbox() {
             // Chargement des informations de la photo associée à l'index sélectionné
             const infoPhotoActuelle = tableauPhotos[indexPhoto];
             zonePhotoLightBox.src = infoPhotoActuelle.src;
-            zonePhotoLightBox.style.width = infoPhotoActuelle.width + 'px';
-            zonePhotoLightBox.style.height = infoPhotoActuelle.height + 'px';
+            zonePhotoLightBox.style.width = infoPhotoActuelle.width + '100px';
+            zonePhotoLightBox.style.height = infoPhotoActuelle.height + '100px';
             zoneReference.textContent = infoPhotoActuelle.reference;
             zoneCategorie.textContent = infoPhotoActuelle.categorie;
         });

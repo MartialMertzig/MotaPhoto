@@ -27,7 +27,6 @@
                 <!-- Création du menu déroulant Catégories -->
                 <div class="menu-deroulant" id="categorie-titre">
                     <div class="menu-titre visible">CATEGORIES</div>
-                    <div class="menu-titre cache">CATEGORIES</div>
                     <i class="fa-solid fa-chevron-down menu-fleche" style="color: #000000;"></i>
                 </div>
                 <div class="menu-options" id="categorie-options">
@@ -49,7 +48,6 @@
                 <!-- Création du menu déroulant Formats -->
                 <div class="menu-deroulant" id="format-titre">
                     <div class="menu-titre visible">FORMATS</div>
-                    <div class="menu-titre cache">FORMATS</div>
                     <i class="fa-solid fa-chevron-down menu-fleche" style="color: #000000;"></i>
                 </div>
                 <div class="menu-options" id="format-options">
@@ -71,7 +69,6 @@
                 <!-- Création du menu déroulant Trier par -->
                 <div class="menu-deroulant" id="tri-titre">
                     <div class="menu-titre visible">TRIER PAR</div>
-                    <div class="menu-titre cache">TRIER PAR</div>
                     <i class="fa-solid fa-chevron-down menu-fleche" style="color: #000000;"></i>
                 </div>
                 <div class="menu-options" id="tri-options">

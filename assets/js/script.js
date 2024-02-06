@@ -1,6 +1,6 @@
   // Gestion de la modale de contact
 document.addEventListener("DOMContentLoaded", function () { 
-	const boutonContact = document.querySelector(".menu a");
+	const boutonContact = document.querySelector("#menu-item-37");
 	const modale = document.querySelector(".modale");
 	const boutonFermeture = document.querySelector(".buttonclose");
 	const conteneurModale = document.getElementById(".modale");
@@ -34,9 +34,9 @@ document.addEventListener("DOMContentLoaded", function () {
     // Si on se trouve sur la page single-photo.php seulement
     let urlActuelle = window.location.href;
 
-    if (urlActuelle.match(/photographies/)) {
+	if (urlActuelle.match(/photographies/)) {
         const nav = document.querySelector("nav");
-        const boutonContactPhoto = document.querySelector("...");
+        const boutonContactPhoto = document.querySelector(".boutonModale");
         const modaleBis = document.querySelector(".emplacement-modale");
         const refARemplir = document.querySelector("... input");
         const refADupliquer = document.getElementById("reference");
@@ -90,12 +90,12 @@ document.addEventListener("DOMContentLoaded", function () {
 	
 	function overlay() {
 		// Apparition de l'overlay au survol
-		const blocPhoto = document.querySelectorAll('.blocPhoto');
+		const autresPhotos = document.querySelectorAll('.autres-photos');
 	
-		blocPhoto.forEach(element => {
-			const overlay = element.querySelector('.iconPhoto');
+		autresPhotos.forEach(element => {
+			const overlay = element.querySelector('.survol-photo');
 			const oeil = element.querySelector('.oeil');
-			const divLienPhoto = element.querySelector('.lienPost');
+			const divLienPhoto = element.querySelector('.lien-photo');
 			const lienPhoto = divLienPhoto.innerHTML;
 	
 	
