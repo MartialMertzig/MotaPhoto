@@ -44,10 +44,10 @@
                 <i class="fa-regular fa-eye oeil" style="color: #ffffff;"></i>
             </div>
             <div class="bas-survol">
-                <div class="reference-photo">
+                <div class="reference-photo survol-reference">
                     <?php echo $reference_photo ?>
                 </div>
-                <div class="categorie-photo">
+                <div class="categorie-photo survol-categorie">
                     <?php echo $liste_categories; ?>
                 </div>
             </div>

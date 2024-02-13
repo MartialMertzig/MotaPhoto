@@ -17,6 +17,12 @@
             </div>
             <!-- Appel du menu principal modifiable dans le tableau de bord -->
             <nav>
+                <label>
+                    <img class="burgerLine-1" src="<?php echo get_theme_file_uri() . '/assets/images/vector.png'; ?>" alt=""/>
+                    <img class="burgerLine-2" src="<?php echo get_theme_file_uri() . '/assets/images/vector.png'; ?>" alt=""/>
+                    <img class="burgerLine-3" src="<?php echo get_theme_file_uri() . '/assets/images/vector.png'; ?>" alt=""/>
+                </label>
+                <div class="main_pages">
                 <?php
                 wp_nav_menu(array(
                     'theme_location' => 'menu_header',
@@ -24,6 +30,7 @@
                     'menu_class' => 'menu',
                 ));
                 ?>
+                </div>
             </nav>
 
             <!-- Modale -->

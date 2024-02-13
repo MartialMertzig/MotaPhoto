@@ -29,7 +29,7 @@ if ($custom_query->have_posts()) :
 		<div class="photographie">
 			<div class="photographiebloc">
 				<h2><?php echo the_title();?></h2>
-				<p>RÉFÉRENCE : <span id="..."><?php echo $reference;?></span></p>
+				<p>RÉFÉRENCE : <span id="reference"><?php echo $reference;?></span></p>
 				<p>CATÉGORIE : 
 					<?php foreach ($categories as $categorie) {
                         echo esc_html($categorie->name);
@@ -66,6 +66,7 @@ endif;
 			<p>Cette photo vous intéresse ?</p>
 			<button class="boutonModale">Contact</button>
 		<div class="miniature">
+			
 			<!-- Définition des bornes du tableau pour créer une boucle -->
 			<?php 
 				// Requête pour obtenir le dernier post
@@ -77,11 +78,6 @@ endif;
 				);
 
 				$last_post = new WP_Query($args_dernier);
-				if($last_post->have_posts() ) : while( $last_post->have_posts() ) : $last_post->the_post();
-				the_content();
-				endwhile;
-				endif;
-				wp_reset_postdata();
 
 				// Requête pour obtenir le premier post
 				$args_premier = array(
@@ -92,14 +88,37 @@ endif;
 				);
 
 				$first_post = new WP_Query($args_premier);
-
-				if($first_post->have_posts() ) : while($first_post->have_posts() ) : $first_post->the_post();
-				endwhile;
-				endif;
-				wp_reset_postdata();
 			?>
-			<div class="vignette">
+
+			<div class="div-vignettes">
 				<div class="conteneur-vignette-precedent">
+					<?php
+						// Récupération de la photo du post précédent
+						if (!empty($previous_post)) {
+							$miniature = get_post_field('post_content', $previous_post->ID);
+						} else {
+							$miniature = get_post_field('post_content', $premier_post);
+						}
+						// Affichage du contenu
+						echo $miniature;
+					?>
+				</div>
+				<div class="conteneur-vignette-suivant">
+					<?php
+						// Récupération de la photo du post suivant
+						if (!empty($previous_post)) {
+							$miniature = get_post_field('post_content', $previous_post->ID);
+						} else {
+							$miniature = get_post_field('post_content', $dernier_post);
+						}
+						// Affichage du contenu
+						echo $miniature;
+					?>
+				</div>
+			</div>
+
+				<div class="fleches">
+				<div class="fleche-precedent">
 					<!-- Récupération du post précédent par date de publication ASC (comportement par defaut) -->
 					<?php
 					$previous_post = get_previous_post();
@@ -114,11 +133,11 @@ endif;
 						$last_post = $last_post->posts[0];
 					?>
 						<a href="<?php echo get_permalink($last_post); ?>">
-							<img class="fleche-droite'" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/fleche-navigation-gauche.png' ?>" alt="Flèche de gauche" />
+							<img class="fleche-gauche" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/fleche-navigation-gauche.png' ?>" alt="Flèche de gauche" />
 						</a>
 					<?php endif; ?>
 				</div>
-				<div class="conteneur-vignette-suivant">
+				<div class="fleche-suivant">
 					<!-- Récupération du post suivant par date de publication ASC (comportement naturel) -->
 					<?php
 					$next_post = get_next_post();
@@ -126,18 +145,23 @@ endif;
 					if (!empty($next_post)) :
 					?>
 						<a href="<?php echo get_permalink($next_post); ?>">
-							<img class="fleche-gauche" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/fleche-navigation-droite.png' ?>" alt="Flèche de droite" />
+							<img class="fleche-droite" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/fleche-navigation-droite.png' ?>" alt="Flèche de droite" />
 						</a>
 					<!-- Si post suivant non-existant, affichage du premier post publié -->
 					<?php else :
 						$first_post = $first_post->posts[0]; 
 					?>
 						<a href="<?php echo get_permalink($first_post); ?>">
-							<img class="fleche-droite'" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/fleche-navigation-droite.png' ?>" alt="Flèche de droite"/>
+							<img class="fleche-droite" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/fleche-navigation-droite.png' ?>" alt="Flèche de droite"/>
 						</a>
 					<?php endif; ?>
 				</div>
 			</div>
+
+		  </div>
+		</div>
+	</div>
+
 		</div>
 		</div>
 	</div>

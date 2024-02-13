@@ -13,7 +13,7 @@
 
 <!-- Bannière Photographe Event  -->
 <section class="banner">
-    <div class='TextBanner'>
+    <div class="TextBanner">
         <h1>PHOTOGRAPHE EVENT</h1>
     </div>
     <div>
@@ -32,7 +32,7 @@
                 <div class="menu-options" id="categorie-options">
                     <?php
 
-                    echo '<div class="vide" id="photocategories-vide"></div>';
+                    echo '<div class="vide" id="photocategories-vide categorie-vide"></div>';
 
                     $possibilites = get_terms('photocategories');
 

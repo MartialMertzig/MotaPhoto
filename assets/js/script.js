@@ -1,6 +1,6 @@
   // Gestion de la modale de contact
 document.addEventListener("DOMContentLoaded", function () { 
-	const boutonContact = document.querySelector("#menu-item-37");
+	const boutonContact = document.querySelector("#menu-item-87");
 	const modale = document.querySelector(".modale");
 	const boutonFermeture = document.querySelector(".buttonclose");
 	const conteneurModale = document.getElementById(".modale");
@@ -37,8 +37,8 @@ document.addEventListener("DOMContentLoaded", function () {
 	if (urlActuelle.match(/photographies/)) {
         const nav = document.querySelector("nav");
         const boutonContactPhoto = document.querySelector(".boutonModale");
-        const modaleBis = document.querySelector(".emplacement-modale");
-        const refARemplir = document.querySelector("... input");
+        const modaleBis = document.querySelector(".modale");
+        const refARemplir = document.querySelector(".modaleref input");
         const refADupliquer = document.getElementById("reference");
 
         boutonContactPhoto.addEventListener("click", function () {
