@@ -23,6 +23,7 @@ add_action('init', 'register_custom_menus');
  function theme_enqueue_script() {
     wp_enqueue_script('jquery');
     wp_enqueue_script('script', get_template_directory_uri() . '/assets/js/script.js');
+    wp_enqueue_script('script-menu', get_template_directory_uri() . '/assets/js/burger.js');
     wp_enqueue_script('script-pagination', get_template_directory_uri() . '/assets/js/charger-plus.js');
     wp_localize_script('script-pagination', 'myAjax', array('ajaxurl' => admin_url('admin-ajax.php'), 'nonce'   => wp_create_nonce('ajax-nonce'),));
     wp_enqueue_script('script-filtres', get_template_directory_uri() . '/assets/js/homeFilters.js');

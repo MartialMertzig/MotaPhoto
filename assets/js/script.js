@@ -1,4 +1,4 @@
-  // Gestion de la modale de contact
+// Gestion de la modale de contact
 document.addEventListener("DOMContentLoaded", function () { 
 	const boutonContact = document.querySelector("#menu-item-87");
 	const modale = document.querySelector(".modale");
@@ -63,6 +63,8 @@ document.addEventListener("DOMContentLoaded", function () {
 		const flecheSuivante = document.querySelector('.fleche-droite');
 		const zoneVignetteGauche = document.querySelector('.conteneur-vignette-precedent');
 		const zoneVignetteDroite = document.querySelector('.conteneur-vignette-suivant');
+		zoneVignetteGauche.style.display = "none";
+		zoneVignetteDroite.style.display = "none";
 	
 		flechePrecedente.addEventListener('mouseenter', function() {
 			zoneVignetteGauche.style.display = "flex";
@@ -119,3 +121,4 @@ document.addEventListener("DOMContentLoaded", function () {
 	
 		lightbox();
 	}
+	

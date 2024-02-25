@@ -43,7 +43,7 @@ if ($custom_query->have_posts()) :
 				</p>
 				<p>TYPE : <?php echo $type;?></p>
 				<p>ANNÉE : <?php echo $annee;?></p>
-				<img class="line3" src="<?php echo get_theme_file_uri() . '/assets/images/line-3.png'; ?>" alt="Grapefruit slice atop a pile of other slices" />
+				<img class="line5" src="<?php echo get_theme_file_uri() . '/assets/images/line-3.png'; ?>" alt="Grapefruit slice atop a pile of other slices" />
 			</div>
 		</div>
 		<!-- Zone droite - La photo -->
@@ -90,32 +90,7 @@ endif;
 				$first_post = new WP_Query($args_premier);
 			?>
 
-			<div class="div-vignettes">
-				<div class="conteneur-vignette-precedent">
-					<?php
-						// Récupération de la photo du post précédent
-						if (!empty($previous_post)) {
-							$miniature = get_post_field('post_content', $previous_post->ID);
-						} else {
-							$miniature = get_post_field('post_content', $premier_post);
-						}
-						// Affichage du contenu
-						echo $miniature;
-					?>
-				</div>
-				<div class="conteneur-vignette-suivant">
-					<?php
-						// Récupération de la photo du post suivant
-						if (!empty($previous_post)) {
-							$miniature = get_post_field('post_content', $previous_post->ID);
-						} else {
-							$miniature = get_post_field('post_content', $dernier_post);
-						}
-						// Affichage du contenu
-						echo $miniature;
-					?>
-				</div>
-			</div>
+			
 
 				<div class="fleches">
 				<div class="fleche-precedent">
@@ -155,6 +130,33 @@ endif;
 							<img class="fleche-droite" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/fleche-navigation-droite.png' ?>" alt="Flèche de droite"/>
 						</a>
 					<?php endif; ?>
+				</div>
+			</div>
+
+			<div class="div-vignettes">
+				<div class="conteneur-vignette-precedent">
+					<?php
+						// Récupération de la photo du post précédent
+						if (!empty($previous_post)) {
+							$miniature = get_post_field('post_content', $previous_post->ID);
+						} else {
+							$miniature = get_post_field('post_content', $dernier_post);
+						}
+						// Affichage du contenu
+						echo $miniature;
+					?>
+				</div>
+				<div class="conteneur-vignette-suivant">
+					<?php
+						// Récupération de la photo du post suivant
+						if (!empty($next_post)) {
+							$vignette = get_post_field('post_content', $next_post->ID);
+						} else {
+							$vignette = get_post_field('post_content', $premier_post);
+						}
+						// Affichage du contenu
+						echo $vignette;
+					?>
 				</div>
 			</div>
 
