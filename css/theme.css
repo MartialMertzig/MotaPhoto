@@ -309,6 +309,7 @@ nav {
 
 .modalecontact {
     display: flex;
+    margin-left: 600px;
     flex-direction: column;
     align-content: center;
     align-items: center;

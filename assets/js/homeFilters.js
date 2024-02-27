@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const options = document.getElementById(optionsId);
         const choixPossibles = options.querySelectorAll(".menu-option");
 
-        // Ajout d'une class pour le dernier élément afin de gérer le border radius
+        // Ajout d'une classe pour le dernier élément afin de gérer le border radius
         choixPossibles[choixPossibles.length - 1].classList.add("dernier");
 
         choixPossibles.forEach(function(option, index) {
@@ -66,6 +66,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 if (index === choixPossibles.length - 1) {
                     option.classList.add("dernier-selectionne");
                 }
+
+                // Fermer le menu déroulant après la sélection
+                options.style.display = "none";
             });
         });
     }
@@ -80,8 +83,7 @@ document.addEventListener("DOMContentLoaded", function() {
     choixOption("format-titre", "format-options", formatZone);
     choixOption("tri-titre", "tri-options", triZone);
 
-
-////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////
 
     // Gestion du système de filtrage des photos
 
@@ -89,7 +91,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const elementsFormat = document.querySelectorAll("#format-options .menu-option");
     const elementsTri = document.querySelectorAll("#tri-options .menu-option");
     const zoneLesPhotos = document.querySelector(".zone-les-photos");
-    const boutonChargerPlus = document.getElementById("charger-plus");
 
     // Définition des valeurs par défaut
     let categorieChangee = 'all';
@@ -158,7 +159,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    ////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////
 
     // Gestion du reset du filtre au clic sur la case vide
 
@@ -173,6 +174,8 @@ document.addEventListener("DOMContentLoaded", function() {
         elementsCategorie.forEach(element => {element.classList.remove("dernier-selectionne")});
         miseAJourPhotos(categorieChangee, formatChange, triChange);
         categorieZone.textContent = "Catégories";
+        // Fermer le menu déroulant après la sélection
+        document.getElementById("categorie-options").style.display = "none";
     });
 
     // Filtre Format
@@ -182,6 +185,8 @@ document.addEventListener("DOMContentLoaded", function() {
         elementsFormat.forEach(element => {element.classList.remove("dernier-selectionne")});
         miseAJourPhotos(categorieChangee, formatChange, triChange);
         formatZone.textContent = "Formats";
+        // Fermer le menu déroulant après la sélection
+        document.getElementById("format-options").style.display = "none";
     });
 
     // Filtre Trier par
@@ -191,5 +196,7 @@ document.addEventListener("DOMContentLoaded", function() {
         elementsTri.forEach(element => {element.classList.remove("dernier-selectionne")});
         miseAJourPhotos(categorieChangee, formatChange, triChange);
         triZone.textContent = "Trier par";
+        // Fermer le menu déroulant après la sélection
+        document.getElementById("tri-options").style.display = "none";
     });
 });

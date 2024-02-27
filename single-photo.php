@@ -67,71 +67,11 @@ endif;
 			<button class="boutonModale">Contact</button>
 		<div class="miniature">
 			
-			<!-- Définition des bornes du tableau pour créer une boucle -->
-			<?php 
-				// Requête pour obtenir le dernier post
-				$args_dernier = array(
-					'post_type' => 'photographies', 
-					'posts_per_page' => 1,
-					'orderby' => 'date',
-					'order' => 'DESC',
-				);
-
-				$last_post = new WP_Query($args_dernier);
-
-				// Requête pour obtenir le premier post
-				$args_premier = array(
-					'post_type' => 'photographies', 
-					'posts_per_page' => 1,
-					'orderby' => 'date',
-					'order' => 'ASC',
-				);
-
-				$first_post = new WP_Query($args_premier);
-			?>
+			
 
 			
 
-				<div class="fleches">
-				<div class="fleche-precedent">
-					<!-- Récupération du post précédent par date de publication ASC (comportement par defaut) -->
-					<?php
-					$previous_post = get_previous_post();
-					// Si le post précédent existe, affichage du post précédent
-					if (!empty($previous_post)) :
-					?>
-						<a href="<?php echo get_permalink($previous_post); ?>">
-							<img class="fleche-gauche" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/fleche-navigation-gauche.png' ?>" alt="Flèche de gauche" />
-						</a>
-					<!-- Si post précédent non-existant, affichage du dernier post publié -->
-					<?php else :
-						$last_post = $last_post->posts[0];
-					?>
-						<a href="<?php echo get_permalink($last_post); ?>">
-							<img class="fleche-gauche" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/fleche-navigation-gauche.png' ?>" alt="Flèche de gauche" />
-						</a>
-					<?php endif; ?>
-				</div>
-				<div class="fleche-suivant">
-					<!-- Récupération du post suivant par date de publication ASC (comportement naturel) -->
-					<?php
-					$next_post = get_next_post();
-					// Si post suivant existant, affichage du post suivant
-					if (!empty($next_post)) :
-					?>
-						<a href="<?php echo get_permalink($next_post); ?>">
-							<img class="fleche-droite" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/fleche-navigation-droite.png' ?>" alt="Flèche de droite" />
-						</a>
-					<!-- Si post suivant non-existant, affichage du premier post publié -->
-					<?php else :
-						$first_post = $first_post->posts[0]; 
-					?>
-						<a href="<?php echo get_permalink($first_post); ?>">
-							<img class="fleche-droite" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/fleche-navigation-droite.png' ?>" alt="Flèche de droite"/>
-						</a>
-					<?php endif; ?>
-				</div>
-			</div>
+				
 
 			<div class="div-vignettes">
 				<div class="conteneur-vignette-precedent">
@@ -157,6 +97,71 @@ endif;
 						// Affichage du contenu
 						echo $vignette;
 					?>
+				</div>
+				
+			</div>
+			<div class="fleches">
+				<div class="fleche-precedent">
+					<!-- Récupération du post précédent par date de publication ASC (comportement par defaut) -->
+					<?php
+					$previous_post = get_previous_post();
+					// Si le post précédent existe, affichage du post précédent
+					if (!empty($previous_post)) :
+					?>
+						<a href="<?php echo get_permalink($previous_post); ?>">
+							<img class="fleche-gauche" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/fleche-navigation-gauche.png' ?>" alt="Flèche de gauche" />
+						</a>
+					<!-- Si post précédent non-existant, affichage du dernier post publié -->
+					<?php else :
+						$last_post = $last_post->posts[0];
+					?>
+						<a href="<?php echo get_permalink($last_post); ?>">
+							<img class="fleche-gauche" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/fleche-navigation-gauche.png' ?>" alt="Flèche de gauche" />
+						</a>
+					<?php endif; ?>
+				</div>
+
+				<!-- Définition des bornes du tableau pour créer une boucle -->
+			<?php 
+				// Requête pour obtenir le dernier post
+				$args_dernier = array(
+					'post_type' => 'photographies', 
+					'posts_per_page' => 1,
+					'orderby' => 'date',
+					'order' => 'DESC',
+				);
+
+				$last_post = new WP_Query($args_dernier);
+
+				// Requête pour obtenir le premier post
+				$args_premier = array(
+					'post_type' => 'photographies', 
+					'posts_per_page' => 1,
+					'orderby' => 'date',
+					'order' => 'ASC',
+				);
+
+				$first_post = new WP_Query($args_premier);
+			?>
+			
+				<div class="fleche-suivant">
+					<!-- Récupération du post suivant par date de publication ASC (comportement naturel) -->
+					<?php
+					$next_post = get_next_post();
+					// Si post suivant existant, affichage du post suivant
+					if (!empty($next_post)) :
+					?>
+						<a href="<?php echo get_permalink($next_post); ?>">
+							<img class="fleche-droite" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/fleche-navigation-droite.png' ?>" alt="Flèche de droite" />
+						</a>
+					<!-- Si post suivant non-existant, affichage du premier post publié -->
+					<?php else :
+						$first_post = $first_post->posts[0]; 
+					?>
+						<a href="<?php echo get_permalink($first_post); ?>">
+							<img class="fleche-droite" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/fleche-navigation-droite.png' ?>" alt="Flèche de droite"/>
+						</a>
+					<?php endif; ?>
 				</div>
 			</div>
 
